@@ -1,9 +1,11 @@
-const React = require('react');
 import './index.scss';
+
+const React = require('react');
 const ReactDOM = require('react-dom');
 
 function App() {
-    return <span>React project</span>;
+  return <span>React project</span>;
 }
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+// eslint-disable-next-line
+ReactDOM.render(<App />, document.getElementById('root'));

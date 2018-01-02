@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-filename-extension": "off",
+    "max-len": ["warn", 120, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false
+    }],
+    "no-param-reassign": ["error", { "props": false }],
+    "react/forbid-prop-types": "off",
+    "react/no-did-mount-set-state": "off"
+  },
+  "parser": "babel-eslint"
+}
