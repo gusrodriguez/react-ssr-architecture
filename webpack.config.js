@@ -4,10 +4,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const autoprefixer = require('autoprefixer');
 
 const BUILD_DIR = path.resolve(__dirname, 'build');
-const APP_DIR = path.resolve(__dirname, './');
+const APP_DIR = path.resolve(__dirname, './app');
 
 const config = {
-  entry: `${APP_DIR}/index.js`,
+  entry: `${APP_DIR}/client/index.js`,
 
   // Where to output the js bundle
   output: {
