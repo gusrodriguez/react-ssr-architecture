@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gusrodriguez/react-notes.git"
+    "url": "git+https://github.com/gusrodriguez/react-app-architecture.git"
   },
   "author": "Gus Rodriguez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gusrodriguez/react-notes/issues"
+    "url": "https://github.com/gusrodriguez/react-app-architecture/issues"
   },
-  "homepage": "https://github.com/gusrodriguez/react-notes#readme",
+  "homepage": "https://github.com/gusrodriguez/react-app-architecture#readme",
   "dependencies": {
     "autoprefixer": "7.2.3",
     "babel-core": "6.26.0",
