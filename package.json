@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack -d --watch",
     "eslint": "$(npm bin)/eslint .",
-    "start": "nodemon ./app/index.js --presets es2015,stage-2,react"
+    "start": "nodemon ./app/server/index.js --presets es2015,stage-2,react"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "postcss-loader": "2.0.9",
     "react": "16.2.0",
     "react-dom": "16.2.0",
+    "react-redux": "5.0.6",
     "sass-loader": "6.0.6",
     "style-loader": "0.19.1",
     "webpack": "2.2.1"
