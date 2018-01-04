@@ -12,7 +12,6 @@ function App(props) {
         <title>React.js app using NPM, Babel6 and Webpack</title>
         <link rel="stylesheet" type="text/css" href="../build/bundle.css" />
         <script src="../build/bundle.js" type="text/javascript" />
-        <script>{`window._PRELOADED_STATE = ${serialize(props, { isJSON: true })};`}</script>
       </head>
       <body>
         <div id="root">

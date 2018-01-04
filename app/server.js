@@ -12,7 +12,17 @@ server.use('/build', express.static(__dirname + '/build'));
 server.get('/', (req, res) => {
   const data = { text: 'React project' };
   const app = ReactDOMServer.renderToString(<App {...data} />);
-  res.send(app);
+
+  res.send(`
+    <html>
+        <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script> 
+        <body>
+            <main id="root">
+                ${app}
+            </main>
+        </body>
+    </html>
+  `);
 });
 
 server.listen(8081);
