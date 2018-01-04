@@ -1,6 +1,8 @@
 /* import './app.scss'; */
 
 const React = require('react');
+const Hello = require('./hello');
+const serialize = require('serialize-javascript');
 
 function App(props) {
   return (
@@ -8,14 +10,14 @@ function App(props) {
       <head>
         <meta charSet="utf-8" />
         <title>React.js app using NPM, Babel6 and Webpack</title>
-      </head>
-      <body>
-        <script>{`window._PRELOADED_STATE = ${JSON.stringify(props)};`}</script>
-        <div>
-          <span>{props.text}</span>
-        </div>
         <link rel="stylesheet" type="text/css" href="../build/bundle.css" />
         <script src="../build/bundle.js" type="text/javascript" />
+        <script>{`window._PRELOADED_STATE = ${serialize(props, { isJSON: true })};`}</script>
+      </head>
+      <body>
+        <div id="root">
+          <Hello text={props.text} />
+        </div>
       </body>
     </html>
   );
