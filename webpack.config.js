@@ -3,7 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // const autoprefixer = require('autoprefixer');
 
-const BUILD_DIR = path.resolve(__dirname, 'build');
+const BUILD_DIR = path.resolve(__dirname, './app/build');
 const APP_DIR = path.resolve(__dirname, './app');
 
 const config = {

@@ -1,4 +1,4 @@
-import './app.scss';
+/* import './app.scss'; */
 
 const React = require('react');
 
@@ -14,8 +14,8 @@ function App(props) {
         <div>
           <span>{props.text}</span>
         </div>
-        <link rel="stylesheet" type="text/css" href="build/bundle.css" />
-        <script src="build/bundle.js" type="text/javascript" />
+        <link rel="stylesheet" type="text/css" href="../build/bundle.css" />
+        <script src="../build/bundle.js" type="text/javascript" />
       </body>
     </html>
   );
