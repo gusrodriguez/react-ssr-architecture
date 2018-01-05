@@ -18,3 +18,6 @@
     
 ## Run the server
     npm run start
+    
+## For browsing the app, just navigate to:
+    localhost:8081
