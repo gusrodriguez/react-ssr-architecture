@@ -3,7 +3,7 @@ const App = require('../../shared/components/app');
 const ReactDOMServer = require('react-dom/server');
 
 function homeController(req, res) {
-  const data = { text: 'React project' };
+  const data = { text: 'This is a Universal React App!' };
   const app = ReactDOMServer.renderToString(<App {...data} />);
 
   res.send(`

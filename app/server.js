@@ -1,3 +1,4 @@
+const config = require('./config');
 const express = require('express');
 const homeController = require('./server/controllers/home.js');
 
@@ -14,6 +15,6 @@ router.get('/', homeController);
 server.use('/', router);
 
 // start the server
-server.listen(8081);
+server.listen(config.port);
 
 module.exports = router;

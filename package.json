@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack -d --watch",
     "eslint": "$(npm bin)/eslint .",
-    "start": "nodemon ./app/index.js --presets es2015,stage-2,react"
+    "start": "nodemon ./app/index.js --presets es2015,stage-2,react",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
