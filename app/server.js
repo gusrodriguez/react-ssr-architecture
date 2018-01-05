@@ -1,26 +1,19 @@
 const express = require('express');
-const React = require('react');
-const App = require('./shared/app');
-const ReactDOMServer = require('react-dom/server');
+const homeController = require('./server/controllers/home.js');
 
 const server = express();
+const router = express.Router();
 
 // serve static assets from here
 server.use('/build', express.static(__dirname + '/build'));
 
-server.get('/', (req, res) => {
-  const data = { text: 'React project' };
-  const app = ReactDOMServer.renderToString(<App {...data} />);
+// routers
+router.get('/', homeController);
 
-  res.send(`
-    <html>
-        <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script>
-        <body>
-            <main id="root">
-                ${app}
-            </main>
-        </body>
-    </html>`);
-});
+// mount the router
+server.use('/', router);
 
+// start the server
 server.listen(8081);
+
+module.exports = router;
