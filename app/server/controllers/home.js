@@ -1,5 +1,5 @@
 const React = require('react');
-const App = require('../../shared/app');
+const App = require('../../shared/components/app');
 const ReactDOMServer = require('react-dom/server');
 
 function homeController(req, res) {

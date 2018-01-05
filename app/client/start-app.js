@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const App = require('../shared/app');
+const App = require('../shared/components/app');
 
 function startApp() {
   const preloadedState = window.__PRELOADED_STATE__;
