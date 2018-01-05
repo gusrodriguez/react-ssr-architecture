@@ -14,18 +14,13 @@ server.get('/', (req, res) => {
 
   res.send(`
     <html>
-        <head>
-          <link rel="stylesheet" type="text/css" href="../build/bundle.css" />
-        </head>
-        <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script> 
+        <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script>
         <body>
             <main id="root">
                 ${app}
             </main>
         </body>
-    </html>
-    <script src="../build/bundle.js" type="text/javascript" />
-  `);
+    </html>`);
 });
 
 server.listen(8081);
