@@ -16,7 +16,6 @@ server.get('/', (req, res) => {
     <html>
         <head>
           <link rel="stylesheet" type="text/css" href="../build/bundle.css" />
-          <script src="../build/bundle.js" type="text/javascript" />
         </head>
         <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script> 
         <body>
@@ -25,6 +24,7 @@ server.get('/', (req, res) => {
             </main>
         </body>
     </html>
+    <script src="../build/bundle.js" type="text/javascript" />
   `);
 });
 
