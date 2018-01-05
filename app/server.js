@@ -5,7 +5,6 @@ const ReactDOMServer = require('react-dom/server');
 
 const server = express();
 
-console.log(__dirname);
 // serve static assets from here
 server.use('/build', express.static(__dirname + '/build'));
 
@@ -15,6 +14,10 @@ server.get('/', (req, res) => {
 
   res.send(`
     <html>
+        <head>
+          <link rel="stylesheet" type="text/css" href="../build/bundle.css" />
+          <script src="../build/bundle.js" type="text/javascript" />
+        </head>
         <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script> 
         <body>
             <main id="root">
