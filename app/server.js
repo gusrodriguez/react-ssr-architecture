@@ -2,11 +2,20 @@ const config = require('./config');
 const express = require('express');
 const homeController = require('./server/controllers/home.js');
 
+const webpack = require('webpack');
+const webpackConfig = require('../webpack.config');
+const middleware = require('webpack-dev-middleware');
+
 const server = express();
 const router = express.Router();
 
+const compiler = webpack(webpackConfig);
+
 // serve static assets from here
 server.use('/build', express.static(__dirname + '/build'));
+
+// webpack server side
+server.use(middleware(compiler, { serverSideRender: true }));
 
 // routers
 router.get('/', homeController);
