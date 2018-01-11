@@ -25,12 +25,12 @@ function homeController(req, res) {
     <html>
         <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script>
         ${css}
-        ${js}
         <body>
             <main id="root">
                 ${app}
             </main>
         </body>
+        ${js}
     </html>`);
 }
 
