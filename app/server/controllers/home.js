@@ -8,14 +8,14 @@ function homeController(req, res) {
   }
 
   const { assetsByChunkName } = res.locals.webpackStats.toJson();
-  const css = normalizeAssets(assetsByChunkName.main)
-    .filter(path => path.endsWith('.css'))
-    .map(path => `<link rel="stylesheet" href="../../build/${path}" />`)
-    .join('\n');
+  // const css = normalizeAssets(assetsByChunkName.main)
+  //   .filter(path => path.endsWith('.css'))
+  //   .map(path => `<link rel="stylesheet" href="../../build/${path}" />`)
+  //   .join('\n');
 
   const js = normalizeAssets(assetsByChunkName.main)
     .filter(path => path.endsWith('.js'))
-    .map(path => `<script src="../../build/${path}"></script>`)
+    .map(path => `<script src="/${path}"></script>`)
     .join('\n');
 
   const data = { text: 'This is a Universal React App!' };
@@ -23,14 +23,13 @@ function homeController(req, res) {
 
   res.send(`
     <html>
+        <head>
         <script>window.__PRELOADED_STATE__ = ${JSON.stringify(data)}</script>
-        ${css}
+        </head>
         <body>
-            <main id="root">
-                ${app}
-            </main>
-        </body>
+            <main id="root">${app}</main>
         ${js}
+        </body>
     </html>`);
 }
 

@@ -5,6 +5,7 @@ function App(props) {
   return (
     <div>
       <Hello text={props.text} />
+      <p>hola asdasd</p>
     </div>
   );
 }
