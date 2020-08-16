@@ -1,6 +1,6 @@
 # react-app-architecture
 
-## Reference architecture to build an universal web app by using the following tools:
+## Reference architecture to build a Server Side Rendering / universal web app by using the following tools:
 
 * React 16
 * Babel
