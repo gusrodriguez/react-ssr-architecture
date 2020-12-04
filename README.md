@@ -17,7 +17,7 @@ Somethimes setting everything up to share components between server and client a
 ```
 
 ### Usage
-This app is empty and only has wit trivial component as an example. The main idea is to give a reference about how to structure and build a proper architecture for an isomorphic App.  
+This app is empty and only has a trivial component as an example. The main idea is to give a reference about how to structure and build a proper architecture for an isomorphic App.  
 :warning:This architecture does not apply to an SPA application, since it does not implement React Router. All the routing is made via express.
 
 ## Build the application
