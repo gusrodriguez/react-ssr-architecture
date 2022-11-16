@@ -39,7 +39,7 @@
     "sass-loader": "6.0.6",
     "serialize-javascript": "1.4.0",
     "style-loader": "0.19.1",
-    "webpack": "2.2.1"
+    "webpack": "5.75.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.1.2",
